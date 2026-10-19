@@ -1,0 +1,269 @@
+@echo off
+
+REM # Automated setup script for Zephyr SDK distribution bundle archive
+REM # for Windows host operating system
+
+pushd %~dp0
+setlocal ENABLEDELAYEDEXPANSION
+set EXITCODE=0
+
+goto entry
+
+REM # Check if command is available
+:check_command
+where %1 > nul 2>&1
+if [%ERRORLEVEL%] neq [0] (
+  echo Zephyr SDK setup requires '%1' to be installed and available in the PATH.
+  echo Please install '%1' and run this script again.
+
+  set EXITCODE=%2
+  exit /b 1
+)
+exit /b 0
+
+:entry
+
+REM # Initialise GNU toolchain list
+set GNU_TOOLCHAINS=
+for /f %%t in (sdk_gnu_toolchains) do (
+  set GNU_TOOLCHAINS=!GNU_TOOLCHAINS! %%t
+)
+
+REM Initialise list of GNU toolchains to install
+set INST_GNU_TOOLCHAINS=
+
+REM # Read bundle version from file
+set /p VERSION=<sdk_version
+
+REM # Resolve release download base URI
+set DL_REL_BASE=https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v%VERSION%
+set DL_GNU_TOOLCHAIN_FILENAME=toolchain_gnu_windows-x86_64_%%t.7z
+set DL_LLVM_TOOLCHAIN_FILENAME=toolchain_llvm_windows-x86_64.7z
+
+REM # Print banner
+echo Zephyr SDK %VERSION% Setup
+echo.
+
+REM # Enable interactive mode if no argument is specified
+if [%1] equ [] (
+  set INTERACTIVE=y
+)
+
+REM # Check dependencies
+
+call :check_command cmake 90
+if [%ERRORLEVEL%] neq [0] goto end
+call :check_command 7z 92
+if [%ERRORLEVEL%] neq [0] goto end
+
+REM # Set host tools wget binary path
+set WGET_CA_CERT=%~dp0hosttools\wget\etc\ssl\cert.pem
+set WGET=%~dp0hosttools\wget\bin\wget.exe --ca-certificate %WGET_CA_CERT%
+
+REM # Enter interactive mode if enabled
+if [%INTERACTIVE%] neq [] (
+  goto interactive
+)
+
+REM # Parse arguments if specified
+:parsearg
+if /i [%1] equ [/t] (
+  if [%2] equ [all] (
+    set INST_GNU_TOOLCHAINS=%GNU_TOOLCHAINS%
+  ) else (
+    set IS_VALID=
+    for %%t in (%GNU_TOOLCHAINS%) do if [%%t] equ [%2] set IS_VALID=y
+    if [!IS_VALID!] equ [y] (
+      set INST_GNU_TOOLCHAINS=!INST_GNU_TOOLCHAINS! %2
+    ) else (
+      echo ERROR: Unknown GNU toolchain '%2'
+      set EXITCODE=2
+      goto end
+    )
+  )
+  set DO_GNU_TOOLCHAIN=y
+  shift
+) else if /i [%1] equ [/l] (
+  set DO_LLVM_TOOLCHAIN=y
+) else if /i [%1] equ [/h] (
+  set DO_HOSTTOOLS=y
+) else if /i [%1] equ [/c] (
+  set DO_CMAKE_PKG=y
+) else (
+  goto usage
+)
+
+shift
+if [%1] neq [] (
+  goto parsearg
+)
+
+goto process
+
+:interactive
+REM # Print interactive mode informational message
+echo ** NOTE **
+echo You only need to run this script once after extracting the Zephyr SDK
+echo distribution bundle archive.
+echo.
+
+REM # Check installation type
+for %%t in (%GNU_TOOLCHAINS%) do (
+  if not exist gnu\%%t\ (
+    set IS_PARTIAL_GNU_SDK=y
+  )
+)
+
+REM # Ask user for set-up choices
+choice /c:yn /m:"Install GNU toolchain"
+if [!ERRORLEVEL!] equ [1] (
+  set DO_GNU_TOOLCHAIN=y
+  if [%IS_PARTIAL_GNU_SDK%] neq [] (
+    choice /c:yn /m:"Install GNU toolchains for all targets"
+    if [!ERRORLEVEL!] equ [1] (
+      set INST_GNU_TOOLCHAINS=%GNU_TOOLCHAINS%
+    ) else (
+      for %%t in (%GNU_TOOLCHAINS%) do (
+        if not exist gnu\%%t\ (
+          choice /c:yn /m:"Install '%%t' GNU toolchain"
+          if [!ERRORLEVEL!] equ [1] (
+            set INST_GNU_TOOLCHAINS=!INST_GNU_TOOLCHAINS! %%t
+          )
+        )
+      )
+    )
+  )
+)
+
+choice /c:yn /m:"Install LLVM toolchain"
+if [%ERRORLEVEL%] equ [1] set DO_LLVM_TOOLCHAIN=y
+
+choice /c:yn /m:"Install host tools"
+if [%ERRORLEVEL%] equ [1] set DO_HOSTTOOLS=y
+
+choice /c:yn /m:"Register Zephyr SDK CMake package"
+if [%ERRORLEVEL%] equ [1] set DO_CMAKE_PKG=y
+
+echo.
+
+:process
+REM # Install GNU toolchains
+if [%DO_GNU_TOOLCHAIN%] neq [] (
+  if not exist gnu\ mkdir gnu
+  pushd gnu
+
+  for %%t in (%INST_GNU_TOOLCHAINS%) do (
+    set TOOLCHAIN_FILENAME=%DL_GNU_TOOLCHAIN_FILENAME%
+    set TOOLCHAIN_URI=%DL_REL_BASE%/!TOOLCHAIN_FILENAME!
+
+    if not exist %%t\ (
+      echo Installing '%%t' GNU toolchain ...
+
+      REM # Download toolchain archive
+      %WGET% -q --show-progress -N -O !TOOLCHAIN_FILENAME! !TOOLCHAIN_URI!
+      if [!ERRORLEVEL!] neq [0] (
+        del /q !TOOLCHAIN_FILENAME!
+        echo ERROR: GNU toolchain download failed
+        set EXITCODE=20
+        goto end
+      )
+
+      REM # Extract archive
+      7z x -o. !TOOLCHAIN_FILENAME!
+      if [!ERRORLEVEL!] neq [0] (
+        echo ERROR: GNU toolchain archive extraction failed
+        set EXITCODE=21
+        goto end
+      )
+
+      REM # Remove archive
+      del /q !TOOLCHAIN_FILENAME!
+    )
+  )
+  popd
+)
+
+REM # Install LLVM toolchain
+if [%DO_LLVM_TOOLCHAIN%] neq [] (
+  if not exist llvm\ (
+    echo Installing LLVM toolchain ...
+
+    set TOOLCHAIN_FILENAME=%DL_LLVM_TOOLCHAIN_FILENAME%
+    set TOOLCHAIN_URI=%DL_REL_BASE%/!TOOLCHAIN_FILENAME!
+
+    REM # Download toolchain archive
+    %WGET% -q --show-progress -N -O !TOOLCHAIN_FILENAME! !TOOLCHAIN_URI!
+    if [!ERRORLEVEL!] neq [0] (
+      del /q !TOOLCHAIN_FILENAME!
+      echo ERROR: LLVM toolchain download failed
+      set EXITCODE=20
+      goto end
+    )
+
+    REM # Extract archive
+    7z x -o. !TOOLCHAIN_FILENAME!
+    if [!ERRORLEVEL!] neq [0] (
+      echo ERROR: LLVM toolchain archive extraction failed
+      set EXITCODE=21
+      goto end
+    )
+
+    REM # Remove archive
+    del /q !TOOLCHAIN_FILENAME!
+
+    echo.
+  )
+)
+
+REM # Install host tools
+if [%DO_HOSTTOOLS%] neq [] (
+  echo Installing host tools ...
+  echo SKIPPED: Windows host tools are not available yet.
+  echo.
+)
+
+REM # Register Zephyr SDK CMake package
+if [%DO_CMAKE_PKG%] neq [] (
+  echo Registering Zephyr SDK CMake package ...
+  cmake -P cmake\zephyr_sdk_export.cmake
+  if [!ERRORLEVEL!] neq [0] (
+    set EXITCODE=40
+    goto end
+  )
+  echo.
+)
+
+echo All done.
+goto end
+
+REM # Print scripting mode usage
+:usage
+echo %~n0 [/t ^<gnu_toolchain^>] [/h] [/c]
+echo.
+echo   /t ^<gnu_toolchain^>   Install specified GNU toolchain
+echo      all               Install all GNU toolchains
+echo   /l                   Install LLVM toolchain
+echo   /h                   Install host tools
+echo   /c                   Register Zephyr SDK CMake package
+echo.
+echo Supported GNU Toolchains:
+echo.
+for %%t in (%GNU_TOOLCHAINS%) do (
+  echo %%t
+)
+echo.
+echo When no arguments are specified, the setup script runs in the interactive
+echo mode asking for user inputs.
+
+set EXITCODE=1
+
+:end
+if [%INTERACTIVE%] neq [] (
+  echo.
+  echo Press any key to exit ...
+  pause > nul
+)
+
+popd
+
+exit /b %EXITCODE%

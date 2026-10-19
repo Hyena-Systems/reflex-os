@@ -1,0 +1,33 @@
+[submodule "sqlite"]
+	path = sqlite
+	url = https://github.com/sqlite/sqlite.git
+[submodule "rhvoice"]
+	path = rhvoice
+	url = https://github.com/RHVoice/RHVoice.git
+[submodule "speechd"]
+	path = speechd
+	url = https://github.com/brailcom/speechd.git
+[submodule "opencv"]
+	path = opencv
+	url = https://github.com/opencv/opencv.git
+[submodule "tesseract"]
+	path = tesseract
+	url = https://github.com/tesseract-ocr/tesseract.git
+[submodule "brltty"]
+	path = brltty
+	url = https://github.com/brltty/brltty.git
+[submodule "liblouis"]
+	path = liblouis
+	url = https://github.com/liblouis/liblouis.git
+[submodule "miniaudio"]
+	path = miniaudio
+	url = https://github.com/mackron/miniaudio.git
+[submodule "opus"]
+	path = opus
+	url = https://github.com/xiph/opus.git
+[submodule "accesskit"]
+	path = accesskit
+	url = https://github.com/AccessKit/accesskit.git
+[submodule "mbedtls"]
+	path = mbedtls
+	url = https://github.com/Mbed-TLS/mbedtls.git
