@@ -148,3 +148,18 @@
 [submodule "home-assistant.io"]
 	path = home-assistant.io
 	url = https://github.com/home-assistant/home-assistant.io.git
+[submodule "third_party/Moodle"]
+	path = third_party/Moodle
+	url = https://github.com/moodle/moodle.git
+[submodule "third_party/BRLTTY"]
+	path = third_party/BRLTTY
+	url = https://github.com/brltty/brltty.git
+[submodule "third_party/LibLouis"]
+	path = third_party/LibLouis
+	url = https://github.com/liblouis/liblouis.git
+[submodule "third_party/ESpeakNG"]
+	path = third_party/ESpeakNG
+	url = https://github.com/espeak-ng/espeak-ng.git
+[submodule "third_party/RHVoice"]
+	path = third_party/RHVoice
+	url = https://github.com/RHVoice/RHVoice.git
