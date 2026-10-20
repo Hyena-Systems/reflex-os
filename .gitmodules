@@ -163,3 +163,36 @@
 [submodule "third_party/RHVoice"]
 	path = third_party/RHVoice
 	url = https://github.com/RHVoice/RHVoice.git
+[submodule "third_party/ardupilot"]
+	path = third_party/ardupilot
+	url = https://github.com/ArduPilot/ardupilot.git
+[submodule "third_party/mavsdk-python"]
+	path = third_party/mavsdk-python
+	url = https://github.com/mavlink/MAVSDK-Python.git
+[submodule "third_party/groundstation"]
+	path = third_party/groundstation
+	url = https://github.com/OneByJorah/GroundStation.git
+[submodule "third_party/px4"]
+	path = third_party/px4
+	url = https://github.com/PX4/PX4-Autopilot.git
+[submodule "cs81-FinalProject"]
+	path = cs81-FinalProject
+	url = https://github.com/zhoucaiNi/cs81-FinalProject.git
+[submodule "third_party/koha"]
+	path = third_party/koha
+	url = https://git.koha-community.org/Koha-community/Koha.git
+[submodule "third_party/reactive-resume"]
+	path = third_party/reactive-resume
+	url = https://github.com/reactive-resume/reactive-resume.git
+[submodule "third_party/mpc-hc"]
+	path = third_party/mpc-hc
+	url = https://github.com/clsid2/mpc-hc.git
+[submodule "third_party/eigen"]
+	path = third_party/eigen
+	url = https://gitlab.com/libeigen/eigen.git
+[submodule "third_party/gtsam"]
+	path = third_party/gtsam
+	url = https://github.com/borglab/gtsam.git
+[submodule "third_party/meshtastic"]
+	path = third_party/meshtastic
+	url = https://github.com/meshtastic/firmware.git
