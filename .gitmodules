@@ -31,3 +31,27 @@
 [submodule "mbedtls"]
 	path = mbedtls
 	url = https://github.com/Mbed-TLS/mbedtls.git
+[submodule "third_party/braillescad"]
+	path = third_party/braillescad
+	url = https://github.com/BelfrySCAD/brailleSCAD.git
+[submodule "third_party/axe-core"]
+	path = third_party/axe-core
+	url = https://github.com/dequelabs/axe-core.git
+[submodule "third_party/pa11y"]
+	path = third_party/pa11y
+	url = https://github.com/pa11y/pa11y.git
+[submodule "third_party/mavsdk"]
+	path = third_party/mavsdk
+	url = https://github.com/mavlink/MAVSDK.git
+[submodule "third_party/mavlink"]
+	path = third_party/mavlink
+	url = https://github.com/mavlink/mavlink.git
+[submodule "third_party/liblouis"]
+	path = third_party/liblouis
+	url = https://github.com/liblouis/liblouis.git
+[submodule "third_party/OsmAnd"]
+	path = third_party/OsmAnd
+	url = https://github.com/osmandapp/OsmAnd.git
+[submodule "third_party/QGIS"]
+	path = third_party/QGIS
+	url = https://github.com/qgis/QGIS.git
