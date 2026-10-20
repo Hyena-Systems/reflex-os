@@ -127,3 +127,24 @@
 [submodule "third_party/PHP"]
 	path = third_party/PHP
 	url = https://github.com/php/php-src.git
+[submodule "third_party/HyenaDashboard"]
+	path = third_party/HyenaDashboard
+	url = https://github.com/RealityRipple/squirrelmail.git
+[submodule "third_party/Mobilizon"]
+	path = third_party/Mobilizon
+	url = https://framagit.org/framasoft/mobilizon.git
+[submodule "third_party/Mumble"]
+	path = third_party/Mumble
+	url = https://github.com/mumble-voip/mumble.git
+[submodule "third_party/GnuCash"]
+	path = third_party/GnuCash
+	url = https://github.com/Gnucash/gnucash.git
+[submodule "third_party/HomeAssistantCore"]
+	path = third_party/HomeAssistantCore
+	url = https://github.com/home-assistant/core.git
+[submodule "third_party/HomeAssistantFrontend"]
+	path = third_party/HomeAssistantFrontend
+	url = https://github.com/home-assistant/frontend.git
+[submodule "home-assistant.io"]
+	path = home-assistant.io
+	url = https://github.com/home-assistant/home-assistant.io.git
