@@ -55,3 +55,57 @@
 [submodule "third_party/QGIS"]
 	path = third_party/QGIS
 	url = https://github.com/qgis/QGIS.git
+[submodule "third_party/Klipper"]
+	path = third_party/Klipper
+	url = https://github.com/Klipper3d/klipper.git
+[submodule "third_party/FreeCAD"]
+	path = third_party/FreeCAD
+	url = https://github.com/FreeCAD/FreeCAD.git
+[submodule "third_party/PrusaSlicer"]
+	path = third_party/PrusaSlicer
+	url = https://github.com/prusa3d/PrusaSlicer.git
+[submodule "third_party/Cura"]
+	path = third_party/Cura
+	url = https://github.com/Ultimaker/Cura.git
+[submodule "third_party/OctoPrint"]
+	path = third_party/OctoPrint
+	url = https://github.com/OctoPrint/OctoPrint.git
+[submodule "Autonomous_Wheelchair"]
+	path = Autonomous_Wheelchair
+	url = https://github.com/RajPShinde/Autonomous_Wheelchair.git
+[submodule "third_party/OrcaSlicer"]
+	path = third_party/OrcaSlicer
+	url = https://github.com/OrcaSlicer/OrcaSlicer.git
+[submodule "third_party/PCL"]
+	path = third_party/PCL
+	url = https://github.com/PointCloudLibrary/pcl.git
+[submodule "third_party/GraphHopper"]
+	path = third_party/GraphHopper
+	url = https://github.com/graphhopper/graphhopper.git
+[submodule "third_party/gtfs-validator"]
+	path = third_party/gtfs-validator
+	url = https://github.com/MobilityData/gtfs-validator.git
+[submodule "third_party/Valhalla"]
+	path = third_party/Valhalla
+	url = https://github.com/valhalla/valhalla.git
+[submodule "third_party/OpenIndoorMaps"]
+	path = third_party/OpenIndoorMaps
+	url = https://github.com/openindoormaps/openindoormaps.git
+[submodule "third_party/MobilityExplorer"]
+	path = third_party/MobilityExplorer
+	url = https://github.com/transitland/mobility-explorer.git
+[submodule "third_party/Nav2"]
+	path = third_party/Nav2
+	url = https://github.com/ros-navigation/navigation2.git
+[submodule "third_party/Nominatim"]
+	path = third_party/Nominatim
+	url = https://github.com/osm-search/Nominatim.git
+[submodule "third_party/OpenTripPlanner"]
+	path = third_party/OpenTripPlanner
+	url = https://github.com/opentripplanner/OpenTripPlanner.git
+[submodule "third_party/OpenSCAD"]
+	path = third_party/OpenSCAD
+	url = https://github.com/openscad/openscad.git
+[submodule "third_party/TransitlandAtlas"]
+	path = third_party/TransitlandAtlas
+	url = https://github.com/transitland/transitland-atlas.git
