@@ -109,3 +109,21 @@
 [submodule "third_party/TransitlandAtlas"]
 	path = third_party/TransitlandAtlas
 	url = https://github.com/transitland/transitland-atlas.git
+[submodule "third_party/BigBlueButton"]
+	path = third_party/BigBlueButton
+	url = https://github.com/bigbluebutton/bigbluebutton.git
+[submodule "third_party/UniversalInspectionEngine"]
+	path = third_party/UniversalInspectionEngine
+	url = https://github.com/AviSrikumeran/Cat_Ready.git
+[submodule "third_party/OpenSAEJ1939"]
+	path = third_party/OpenSAEJ1939
+	url = https://github.com/DanielMartensson/Open-SAE-J1939.git
+[submodule "third_party/Calibre"]
+	path = third_party/Calibre
+	url = https://github.com/kovidgoyal/calibre.git
+[submodule "third_party/Radicale"]
+	path = third_party/Radicale
+	url = https://github.com/Kozea/Radicale.git
+[submodule "third_party/PHP"]
+	path = third_party/PHP
+	url = https://github.com/php/php-src.git
