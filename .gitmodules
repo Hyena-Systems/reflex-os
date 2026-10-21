@@ -1,240 +1,75 @@
-[submodule "sqlite"]
-	path = sqlite
-	url = https://github.com/sqlite/sqlite.git
-[submodule "speechd"]
-	path = speechd
-	url = https://github.com/brailcom/speechd.git
-[submodule "opencv"]
-	path = opencv
-	url = https://github.com/opencv/opencv.git
-[submodule "tesseract"]
-	path = tesseract
-	url = https://github.com/tesseract-ocr/tesseract.git
-[submodule "brltty"]
-	path = brltty
-	url = https://github.com/brltty/brltty.git
-[submodule "liblouis"]
-	path = liblouis
-	url = https://github.com/liblouis/liblouis.git
-[submodule "miniaudio"]
-	path = miniaudio
-	url = https://github.com/mackron/miniaudio.git
-[submodule "opus"]
-	path = opus
-	url = https://github.com/xiph/opus.git
-[submodule "accesskit"]
-	path = accesskit
-	url = https://github.com/AccessKit/accesskit.git
-[submodule "mbedtls"]
-	path = mbedtls
-	url = https://github.com/Mbed-TLS/mbedtls.git
-[submodule "third_party/braillescad"]
-	path = third_party/braillescad
-	url = https://github.com/BelfrySCAD/brailleSCAD.git
-[submodule "third_party/axe-core"]
-	path = third_party/axe-core
-	url = https://github.com/dequelabs/axe-core.git
-[submodule "third_party/pa11y"]
-	path = third_party/pa11y
-	url = https://github.com/pa11y/pa11y.git
-[submodule "third_party/mavsdk"]
-	path = third_party/mavsdk
-	url = https://github.com/mavlink/MAVSDK.git
-[submodule "third_party/mavlink"]
-	path = third_party/mavlink
-	url = https://github.com/mavlink/mavlink.git
-[submodule "third_party/liblouis"]
-	path = third_party/liblouis
-	url = https://github.com/liblouis/liblouis.git
-[submodule "third_party/OsmAnd"]
-	path = third_party/OsmAnd
-	url = https://github.com/osmandapp/OsmAnd.git
-[submodule "third_party/QGIS"]
-	path = third_party/QGIS
-	url = https://github.com/qgis/QGIS.git
-[submodule "third_party/Klipper"]
-	path = third_party/Klipper
-	url = https://github.com/Klipper3d/klipper.git
-[submodule "third_party/FreeCAD"]
-	path = third_party/FreeCAD
-	url = https://github.com/FreeCAD/FreeCAD.git
-[submodule "third_party/PrusaSlicer"]
-	path = third_party/PrusaSlicer
-	url = https://github.com/prusa3d/PrusaSlicer.git
-[submodule "third_party/Cura"]
-	path = third_party/Cura
-	url = https://github.com/Ultimaker/Cura.git
-[submodule "third_party/OctoPrint"]
-	path = third_party/OctoPrint
-	url = https://github.com/OctoPrint/OctoPrint.git
-[submodule "Autonomous_Wheelchair"]
-	path = third_party/Autonomous_Wheelchair
-	url = https://github.com/RajPShinde/Autonomous_Wheelchair.git
-[submodule "third_party/OrcaSlicer"]
-	path = third_party/OrcaSlicer
-	url = https://github.com/OrcaSlicer/OrcaSlicer.git
-[submodule "third_party/PCL"]
-	path = third_party/PCL
-	url = https://github.com/PointCloudLibrary/pcl.git
-[submodule "third_party/GraphHopper"]
-	path = third_party/GraphHopper
-	url = https://github.com/graphhopper/graphhopper.git
-[submodule "third_party/gtfs-validator"]
-	path = third_party/gtfs-validator
-	url = https://github.com/MobilityData/gtfs-validator.git
-[submodule "third_party/Valhalla"]
-	path = third_party/Valhalla
-	url = https://github.com/valhalla/valhalla.git
-[submodule "third_party/OpenIndoorMaps"]
-	path = third_party/OpenIndoorMaps
-	url = https://github.com/openindoormaps/openindoormaps.git
-[submodule "third_party/MobilityExplorer"]
-	path = third_party/MobilityExplorer
-	url = https://github.com/transitland/mobility-explorer.git
-[submodule "third_party/Nav2"]
-	path = third_party/Nav2
-	url = https://github.com/ros-navigation/navigation2.git
-[submodule "third_party/Nominatim"]
-	path = third_party/Nominatim
-	url = https://github.com/osm-search/Nominatim.git
-[submodule "third_party/OpenTripPlanner"]
-	path = third_party/OpenTripPlanner
-	url = https://github.com/opentripplanner/OpenTripPlanner.git
-[submodule "third_party/OpenSCAD"]
-	path = third_party/OpenSCAD
-	url = https://github.com/openscad/openscad.git
-[submodule "third_party/TransitlandAtlas"]
-	path = third_party/TransitlandAtlas
-	url = https://github.com/transitland/transitland-atlas.git
-[submodule "third_party/BigBlueButton"]
-	path = third_party/BigBlueButton
-	url = https://github.com/bigbluebutton/bigbluebutton.git
-[submodule "third_party/UniversalInspectionEngine"]
-	path = third_party/UniversalInspectionEngine
-	url = https://github.com/AviSrikumeran/Cat_Ready.git
-[submodule "third_party/OpenSAEJ1939"]
-	path = third_party/OpenSAEJ1939
-	url = https://github.com/DanielMartensson/Open-SAE-J1939.git
-[submodule "third_party/Calibre"]
-	path = third_party/Calibre
-	url = https://github.com/kovidgoyal/calibre.git
-[submodule "third_party/Radicale"]
-	path = third_party/Radicale
-	url = https://github.com/Kozea/Radicale.git
-[submodule "third_party/PHP"]
-	path = third_party/PHP
-	url = https://github.com/php/php-src.git
-[submodule "third_party/HyenaDashboard"]
-	path = third_party/HyenaDashboard
-	url = https://github.com/RealityRipple/squirrelmail.git
-[submodule "third_party/Mobilizon"]
-	path = third_party/Mobilizon
-	url = https://framagit.org/framasoft/mobilizon.git
-[submodule "third_party/Mumble"]
-	path = third_party/Mumble
-	url = https://github.com/mumble-voip/mumble.git
-[submodule "third_party/GnuCash"]
-	path = third_party/GnuCash
-	url = https://github.com/Gnucash/gnucash.git
-[submodule "third_party/HomeAssistantCore"]
-	path = third_party/HomeAssistantCore
-	url = https://github.com/home-assistant/core.git
-[submodule "third_party/HomeAssistantFrontend"]
-	path = third_party/HomeAssistantFrontend
-	url = https://github.com/home-assistant/frontend.git
-[submodule "home-assistant.io"]
-	path = home-assistant.io
-	url = https://github.com/home-assistant/home-assistant.io.git
-[submodule "third_party/Moodle"]
-	path = third_party/Moodle
-	url = https://github.com/moodle/moodle.git
-[submodule "third_party/BRLTTY"]
-	path = third_party/BRLTTY
-	url = https://github.com/brltty/brltty.git
-[submodule "third_party/LibLouis"]
-	path = third_party/LibLouis
-	url = https://github.com/liblouis/liblouis.git
-[submodule "third_party/ESpeakNG"]
-	path = third_party/ESpeakNG
-	url = https://github.com/espeak-ng/espeak-ng.git
-[submodule "third_party/ardupilot"]
-	path = third_party/ardupilot
-	url = https://github.com/ArduPilot/ardupilot.git
-[submodule "third_party/mavsdk-python"]
-	path = third_party/mavsdk-python
-	url = https://github.com/mavlink/MAVSDK-Python.git
-[submodule "third_party/groundstation"]
-	path = third_party/groundstation
-	url = https://github.com/OneByJorah/GroundStation.git
-[submodule "third_party/px4"]
-	path = third_party/px4
-	url = https://github.com/PX4/PX4-Autopilot.git
-[submodule "cs81-FinalProject"]
-	path = cs81-FinalProject
-	url = https://github.com/zhoucaiNi/cs81-FinalProject.git
-[submodule "third_party/koha"]
-	path = third_party/koha
-	url = https://git.koha-community.org/Koha-community/Koha.git
-[submodule "third_party/reactive-resume"]
-	path = third_party/reactive-resume
-	url = https://github.com/reactive-resume/reactive-resume.git
-[submodule "third_party/mpc-hc"]
-	path = third_party/mpc-hc
-	url = https://github.com/clsid2/mpc-hc.git
-[submodule "third_party/eigen"]
-	path = third_party/eigen
-	url = https://gitlab.com/libeigen/eigen.git
-[submodule "third_party/gtsam"]
-	path = third_party/gtsam
-	url = https://github.com/borglab/gtsam.git
-[submodule "third_party/meshtastic"]
-	path = third_party/meshtastic
-	url = https://github.com/meshtastic/firmware.git
-[submodule "third_party/RHVoice"]
-	path = third_party/RHVoice
-	url = https://github.com/RHVoice/RHVoice.git
-[submodule "third_party/sqlite"]
-	path = third_party/sqlite
-	url = https://github.com/sqlite/sqlite.git
-[submodule "third_party/speechd"]
-	path = third_party/speechd
-	url = https://github.com/brailcom/speechd.git
-[submodule "third_party/opencv"]
-	path = third_party/opencv
-	url = https://github.com/opencv/opencv.git
-[submodule "third_party/tesseract"]
-	path = third_party/tesseract
-	url = https://github.com/tesseract-ocr/tesseract.git
-[submodule "third_party/brltty"]
-	path = third_party/brltty
-	url = https://github.com/brltty/brltty.git
-[submodule "third_party/miniaudio"]
-	path = third_party/miniaudio
-	url = https://github.com/mackron/miniaudio.git
-[submodule "third_party/opus"]
-	path = third_party/opus
-	url = https://github.com/xiph/opus.git
-[submodule "third_party/accesskit"]
-	path = third_party/accesskit
-	url = https://github.com/AccessKit/accesskit.git
-[submodule "third_party/mbedtls"]
-	path = third_party/mbedtls
-	url = https://github.com/Mbed-TLS/mbedtls.git
-[submodule "third_party/espeak-ng"]
-	path = third_party/espeak-ng
-	url = https://github.com/espeak-ng/espeak-ng.git
-[submodule "third_party/home-assistant.io"]
-	path = third_party/home-assistant.io
-	url = https://github.com/home-assistant/home-assistant.io.git
-[submodule "third_party/littlefs"]
-	path = third_party/littlefs
-	url = https://github.com/littlefs-project/littlefs.git
-[submodule "third_party/nanopb"]
-	path = third_party/nanopb
-	url = https://github.com/nanopb/nanopb.git
-[submodule "third_party/lvgl"]
-	path = third_party/lvgl
-	url = https://github.com/lvgl/lvgl.git
 [submodule "third_party/zephyr"]
 	path = third_party/zephyr
 	url = https://github.com/zephyrproject-rtos/zephyr.git
+
+[submodule "third_party/piper"]
+	path = third_party/piper
+	url = https://github.com/rhasspy/piper.git
+
+[submodule "third_party/coqui-tts"]
+	path = third_party/coqui-tts
+	url = https://github.com/coqui-ai/TTS.git
+
+[submodule "third_party/espeak-ng"]
+	path = third_party/espeak-ng
+	url = https://github.com/espeak-ng/espeak-ng.git
+
+[submodule "third_party/speechd"]
+	path = third_party/speechd
+	url = https://github.com/brailcom/speechd.git
+
+[submodule "third_party/brltty"]
+	path = third_party/brltty
+	url = https://github.com/brltty/brltty.git
+
+[submodule "third_party/liblouis"]
+	path = third_party/liblouis
+	url = https://github.com/liblouis/liblouis.git
+
+[submodule "third_party/accesskit"]
+	path = third_party/accesskit
+	url = https://github.com/AccessKit/accesskit.git
+
+[submodule "third_party/sqlite"]
+	path = third_party/sqlite
+	url = https://github.com/sqlite/sqlite.git
+
+[submodule "third_party/opencv"]
+	path = third_party/opencv
+	url = https://github.com/opencv/opencv.git
+
+[submodule "third_party/tesseract"]
+	path = third_party/tesseract
+	url = https://github.com/tesseract-ocr/tesseract.git
+
+[submodule "third_party/littlefs"]
+	path = third_party/littlefs
+	url = https://github.com/littlefs-project/littlefs.git
+
+[submodule "third_party/nanopb"]
+	path = third_party/nanopb
+	url = https://github.com/nanopb/nanopb.git
+
+[submodule "third_party/lvgl"]
+	path = third_party/lvgl
+	url = https://github.com/lvgl/lvgl.git
+
+[submodule "third_party/mbedtls"]
+	path = third_party/mbedtls
+	url = https://github.com/Mbed-TLS/mbedtls.git
+
+[submodule "third_party/miniaudio"]
+	path = third_party/miniaudio
+	url = https://github.com/mackron/miniaudio.git
+
+[submodule "third_party/opus"]
+	path = third_party/opus
+	url = https://github.com/xiph/opus.git
+
+[submodule "third_party/home-assistant.io"]
+	path = third_party/home-assistant.io
+	url = https://github.com/home-assistant/home-assistant.io.git
+
+[submodule "third_party/Autonomous_Wheelchair"]
+	path = third_party/Autonomous_Wheelchair
+	url = https://github.com/RajPShinde/Autonomous_Wheelchair.git
