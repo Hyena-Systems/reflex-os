@@ -68,7 +68,7 @@
 	path = third_party/OctoPrint
 	url = https://github.com/OctoPrint/OctoPrint.git
 [submodule "Autonomous_Wheelchair"]
-	path = Autonomous_Wheelchair
+	path = third_party/Autonomous_Wheelchair
 	url = https://github.com/RajPShinde/Autonomous_Wheelchair.git
 [submodule "third_party/OrcaSlicer"]
 	path = third_party/OrcaSlicer
@@ -190,3 +190,51 @@
 [submodule "third_party/meshtastic"]
 	path = third_party/meshtastic
 	url = https://github.com/meshtastic/firmware.git
+[submodule "third_party/RHVoice"]
+	path = third_party/RHVoice
+	url = https://github.com/RHVoice/RHVoice.git
+[submodule "third_party/sqlite"]
+	path = third_party/sqlite
+	url = https://github.com/sqlite/sqlite.git
+[submodule "third_party/speechd"]
+	path = third_party/speechd
+	url = https://github.com/brailcom/speechd.git
+[submodule "third_party/opencv"]
+	path = third_party/opencv
+	url = https://github.com/opencv/opencv.git
+[submodule "third_party/tesseract"]
+	path = third_party/tesseract
+	url = https://github.com/tesseract-ocr/tesseract.git
+[submodule "third_party/brltty"]
+	path = third_party/brltty
+	url = https://github.com/brltty/brltty.git
+[submodule "third_party/miniaudio"]
+	path = third_party/miniaudio
+	url = https://github.com/mackron/miniaudio.git
+[submodule "third_party/opus"]
+	path = third_party/opus
+	url = https://github.com/xiph/opus.git
+[submodule "third_party/accesskit"]
+	path = third_party/accesskit
+	url = https://github.com/AccessKit/accesskit.git
+[submodule "third_party/mbedtls"]
+	path = third_party/mbedtls
+	url = https://github.com/Mbed-TLS/mbedtls.git
+[submodule "third_party/espeak-ng"]
+	path = third_party/espeak-ng
+	url = https://github.com/espeak-ng/espeak-ng.git
+[submodule "third_party/home-assistant.io"]
+	path = third_party/home-assistant.io
+	url = https://github.com/home-assistant/home-assistant.io.git
+[submodule "third_party/littlefs"]
+	path = third_party/littlefs
+	url = https://github.com/littlefs-project/littlefs.git
+[submodule "third_party/nanopb"]
+	path = third_party/nanopb
+	url = https://github.com/nanopb/nanopb.git
+[submodule "third_party/lvgl"]
+	path = third_party/lvgl
+	url = https://github.com/lvgl/lvgl.git
+[submodule "third_party/zephyr"]
+	path = third_party/zephyr
+	url = https://github.com/zephyrproject-rtos/zephyr.git
