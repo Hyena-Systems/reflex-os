@@ -160,9 +160,6 @@
 [submodule "third_party/ESpeakNG"]
 	path = third_party/ESpeakNG
 	url = https://github.com/espeak-ng/espeak-ng.git
-[submodule "third_party/RHVoice"]
-	path = third_party/RHVoice
-	url = https://github.com/RHVoice/RHVoice.git
 [submodule "third_party/ardupilot"]
 	path = third_party/ardupilot
 	url = https://github.com/ArduPilot/ardupilot.git
@@ -196,3 +193,6 @@
 [submodule "third_party/meshtastic"]
 	path = third_party/meshtastic
 	url = https://github.com/meshtastic/firmware.git
+[submodule "third_party/RHVoice"]
+	path = third_party/RHVoice
+	url = https://github.com/RHVoice/RHVoice.git
