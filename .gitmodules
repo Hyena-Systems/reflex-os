@@ -1,9 +1,6 @@
 [submodule "sqlite"]
 	path = sqlite
 	url = https://github.com/sqlite/sqlite.git
-[submodule "rhvoice"]
-	path = rhvoice
-	url = https://github.com/RHVoice/RHVoice.git
 [submodule "speechd"]
 	path = speechd
 	url = https://github.com/brailcom/speechd.git
@@ -193,6 +190,3 @@
 [submodule "third_party/meshtastic"]
 	path = third_party/meshtastic
 	url = https://github.com/meshtastic/firmware.git
-[submodule "third_party/RHVoice"]
-	path = third_party/RHVoice
-	url = https://github.com/RHVoice/RHVoice.git
